@@ -5,6 +5,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:        # permite ejecutar desde la UI de GitHub
 
 jobs:
   build:
@@ -35,10 +36,3 @@ jobs:
     steps:
       - name: Simular deploy
         run: echo "Desplegando a producción..."
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-  workflow_dispatch:        # permite ejecutar desde la UI de GitHub
-
